@@ -1,0 +1,4 @@
+1. tạo project và chuẩn bị repo trên git
+2. npm install và make auth
+3.tạo db và setup db (lệnh tạo db trên mac: mysql -uroot -p -e 'create database laravel_qa')
+4. migrate
