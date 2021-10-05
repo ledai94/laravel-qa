@@ -1,0 +1,4 @@
+php artisan make:factory QuestionFactory 
+viết fake dữ liệu vào factories 
+add dữ liệu fake vào db bằng lệnh php artisan tinker
+sau đó code factory(App\User::class,3)->create()
