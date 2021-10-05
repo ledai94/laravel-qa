@@ -1,0 +1,4 @@
+1.chạy lệnh php artisan make:model Question -m(= lệnh --migration)
+2. sửa migration
+các trường như title slug body views answer vote best_answer_id user_id
+trường khóa ngoại user_id liên kết đến bảng user và cột id 
