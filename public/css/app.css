@@ -9,7 +9,7 @@
   --blue: #3490dc;
   --indigo: #6574cd;
   --purple: #9561e2;
-  --pink: #f66D9b;
+  --pink: #f66d9b;
   --red: #e3342f;
   --orange: #f6993f;
   --yellow: #ffed4a;
@@ -533,7 +533,7 @@ mark,
 
 code {
   font-size: 87.5%;
-  color: #f66D9b;
+  color: #f66d9b;
   word-wrap: break-word;
 }
 
@@ -12022,5 +12022,23 @@ a.text-dark:focus {
 .counters .answer {
   width: 60px;
   height: 60px;
+}
+
+.counters .status.unanswered {
+  border: none;
+}
+
+.counters .status.answered {
+  border: 1px solid #5fbb7e;
+  color: #5fbb7e;
+}
+
+.counters .status.answered-accepted {
+  background: #5fbb7e;
+  color: #fff;
+}
+
+.counters .view {
+  margin-top: 10px;
 }
 

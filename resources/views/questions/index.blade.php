@@ -15,11 +15,11 @@
                                 <strong>{{$question->votes}}</strong>
                                 {{str_plural('vote',$question->votes)}}
                             </div>
-                            <div class="status">
+                            <div class="status {{$question->status}}">
                                 <strong>{{$question->votes}}</strong>
                                 {{str_plural('answer',$question->answers)}}
                             </div>
-                            <div class="views">
+                            <div class="view">
                                 {{$question->views . " " . str_plural('view',$question->views)}}
                             </div>
                         </div>
@@ -37,6 +37,7 @@
                             {{str_limit($question->body,250)}}
                         </div>
                     </div>
+                    <hr>
                     @endforeach
                     <div class='mx-auto'>
                         {{$questions->links()}}
