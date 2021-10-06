@@ -12,7 +12,7 @@
                     <div class='media'>
                         <div class='media-body'>
                             <h3 class='mt-0'>
-                                <a href="{{$question->url}}">
+                                <a href="{{route('questions.show',$question->id)}}">
                                     {{$question ->title}}
                                 </a>
                             </h3>
