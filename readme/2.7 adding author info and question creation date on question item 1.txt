@@ -1,0 +1,3 @@
+sử dụng eloquent accessors
+how to format timestamp
+how to use eager loading (n+1)
