@@ -1,0 +1,3 @@
+viết vào trong model quản lý user để thể hiện
+1 người dùng có nhiều câu hỏi
+mỗi câu hỏi có slug là tittle của câu hỏi
