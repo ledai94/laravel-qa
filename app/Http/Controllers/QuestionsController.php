@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Questions;
+use App\Question;
 use Illuminate\Http\Request;
 
 class QuestionsController extends Controller
@@ -14,7 +14,7 @@ class QuestionsController extends Controller
      */
     public function index()
     {
-        $questions = Questions::latest()->paginate(5);
+        $questions = Question::latest()->paginate(5);
         return view('questions.index',compact('questions'));
         //
     }

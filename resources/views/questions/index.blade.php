@@ -15,7 +15,6 @@
                                 <a href="{{$question->url}}">
                                     {{$question ->title}}
                                 </a>
-                                {{$question->title}}
                             </h3>
                             <p class="lead">
                                 Asked by
