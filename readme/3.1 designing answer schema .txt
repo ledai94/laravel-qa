@@ -1,0 +1,7 @@
+Ansewers table schema
+id
+user_id
+question_id
+body
+votes_count
+created_at,updated_at
