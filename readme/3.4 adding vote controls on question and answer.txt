@@ -1,0 +1,5 @@
+add vote control
+interating fontawesome5
+write sass to style the vote control
+note build the vote controls markup and styling
+implementing all functionallity of the vote control system will be disussed in the other section
