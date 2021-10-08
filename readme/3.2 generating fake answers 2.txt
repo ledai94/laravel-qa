@@ -1,0 +1,8 @@
+eloquent event 
+eloquent model fire several event allowing you to hook into  the fllowing point in model life cycle
+retrieved
+creating,created
+updating,updated
+saving,saved
+deleting,deleted
+restoring, restored
