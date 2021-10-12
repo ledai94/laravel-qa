@@ -37,10 +37,14 @@ class Answer extends Model
     public function getCreatedDateAttribute(){
         return $this->created_at->diffForHumans();
     }
-    public function FunctionName(Type $var = null){
 
-    }
     public function getStatusAttribute(){
-        return $this->id === $this->question->best_answer_id ? 'vote-accepted':'';
+        return $this->isBest() ? 'vote-accepted' : "";
+    }
+    public function getIsbestAttribute(){
+        return $this->isBest();
+    }
+    public function isBest(){
+        return $this->id === $this->question->best_answer_id;
     }
 }
