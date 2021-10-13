@@ -1,0 +1,9 @@
+a Question can be voted by more than 1 user
+an answer can be voted by more  than one user
+a user can votes more than one question (he or she can only vote a unique question)
+a user can also votes more than one answer (he or she can only vote a unique answer)
+vote up (1 )if user like the question/answer
+vote down(-1) if a user dislike the question/answer
+*relationship 
+many to many relationship
+many to many polymirphic relationship
