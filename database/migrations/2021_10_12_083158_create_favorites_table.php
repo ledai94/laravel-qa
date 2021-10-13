@@ -17,9 +17,10 @@ class CreateFavoritesTable extends Migration
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('question_id');
             $table->timestamps();
-            $table->unique(['user_id','question_id']);
+            $table->unique(['user_id', 'question_id']);            
         });
     }
+
     /**
      * Reverse the migrations.
      *
