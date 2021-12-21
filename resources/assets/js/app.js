@@ -1,18 +1,19 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
-require('./fontawesome');
-window.Vue = require('vue');
-import VueIziToast from 'vue-izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
+require("./bootstrap");
+require("./fontawesome");
+window.Vue = require("vue");
+import VueIziToast from "vue-izitoast";
+import "izitoast/dist/css/iziToast.min.css";
+import Authrization from "./authorziation/authorize";
+import Vue from "vue";
 
 Vue.use(VueIziToast);
-
+Vue.use(Authrization);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -20,11 +21,11 @@ Vue.use(VueIziToast);
  */
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('user-info', require('./components/UserInfo.vue'));
-Vue.component('answer',require('./components/Answer.vue'));
-Vue.component('favorite', require('./components/Favorite.vue'));
-Vue.component('accept', require('./components/Accept.vue'));
+Vue.component("user-info", require("./components/UserInfo.vue"));
+Vue.component("answer", require("./components/Answer.vue"));
+Vue.component("favorite", require("./components/Favorite.vue"));
+Vue.component("accept", require("./components/Accept.vue"));
 
 const app = new Vue({
-    el: '#app'
+    el: "#app"
 });
