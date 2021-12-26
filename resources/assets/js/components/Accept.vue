@@ -1,7 +1,5 @@
 <template>
     <div>
-        <!-- co the accept khi chua vote -->
-        <!-- neu vote thi truyen user id den ham xu ly trong controller -->
         <a
             v-if="canAccept"
             title="Mark this answer as best answer"
@@ -10,8 +8,7 @@
         >
             <i class="fas fa-check fa-2x"></i>
         </a>
-        <!-- fix bug -->
-        <!-- nếu đã vote thì chuyển tích sang màu xanh -->
+
         <a
             v-if="accepted"
             title="The question owner accepted this answer as best answer"
@@ -19,27 +16,20 @@
         >
             <i class="fas fa-check fa-2x"></i>
         </a>
-        <!-- neu khong phai cua minh ma khong vote thi hien mau trang -->
-        <!-- <a
-            v-if="!accepted"
-            title="The question owner accepted this answer as best answer"
-            :class="classes"
-            @click.prevent="create"
-        >
-            <i class="fas fa-check fa-2x"></i>
-        </a> -->
     </div>
 </template>
 
 <script>
 export default {
     props: ["answer"],
+
     data() {
         return {
             isBest: this.answer.is_best,
             id: this.answer.id
         };
     },
+
     methods: {
         create() {
             axios.post(`/answers/${this.id}/accept`).then(res => {
@@ -47,17 +37,21 @@ export default {
                     timeout: 3000,
                     position: "bottomLeft"
                 });
+
                 this.isBest = true;
             });
         }
     },
+
     computed: {
         canAccept() {
             return this.authorize("accept", this.answer);
         },
+
         accepted() {
             return !this.canAccept && this.isBest;
         },
+
         classes() {
             return ["mt-2", this.isBest ? "vote-accepted" : ""];
         }
