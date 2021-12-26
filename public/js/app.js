@@ -14507,6 +14507,7 @@ __WEBPACK_IMPORTED_MODULE_4_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2__aut
 __WEBPACK_IMPORTED_MODULE_4_vue___default.a.component("user-info", __webpack_require__(57));
 __WEBPACK_IMPORTED_MODULE_4_vue___default.a.component("vote", __webpack_require__(70));
 __WEBPACK_IMPORTED_MODULE_4_vue___default.a.component("answers", __webpack_require__(74));
+__WEBPACK_IMPORTED_MODULE_4_vue___default.a.component("question-page", __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./pages/QuestionPage.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())));
 
 var app = new __WEBPACK_IMPORTED_MODULE_4_vue___default.a({
   el: "#app"
@@ -53559,6 +53560,10 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Vote_vue__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Vote_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Vote_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__UserInfo_vue__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__UserInfo_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__UserInfo_vue__);
 //
 //
 //
@@ -53614,8 +53619,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ["answer"],
+    components: { Vote: __WEBPACK_IMPORTED_MODULE_0__Vote_vue___default.a, UserInfo: __WEBPACK_IMPORTED_MODULE_1__UserInfo_vue___default.a },
     data: function data() {
         return {
             editing: false,
@@ -54055,6 +54063,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     },
     accept: function accept(user, answer) {
         return user.id === answer.question.user_id;
+    },
+    deleteQuestion: function deleteQuestion(user, question) {
+        return user.id === question.user_id && question.answers_count < 1;
     }
 });
 
