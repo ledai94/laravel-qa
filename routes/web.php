@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', 'QuestionController@index');
-
+Route::get('/', 'HomeController@index');
+// Route::get('', 'HomeController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

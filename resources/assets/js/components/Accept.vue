@@ -1,5 +1,7 @@
 <template>
     <div>
+        <!-- co the accept khi chua vote -->
+        <!-- neu vote thi truyen user id den ham xu ly trong controller -->
         <a
             v-if="canAccept"
             title="Mark this answer as best answer"
@@ -8,7 +10,8 @@
         >
             <i class="fas fa-check fa-2x"></i>
         </a>
-
+        <!-- fix bug -->
+        <!-- nếu đã vote thì chuyển tích sang màu xanh -->
         <a
             v-if="accepted"
             title="The question owner accepted this answer as best answer"
@@ -16,6 +19,15 @@
         >
             <i class="fas fa-check fa-2x"></i>
         </a>
+        <!-- neu khong phai cua minh ma khong vote thi hien mau trang -->
+        <!-- <a
+            v-if="!accepted"
+            title="The question owner accepted this answer as best answer"
+            :class="classes"
+            @click.prevent="create"
+        >
+            <i class="fas fa-check fa-2x"></i>
+        </a> -->
     </div>
 </template>
 

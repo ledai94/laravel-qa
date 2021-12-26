@@ -21,7 +21,7 @@
         </a>
 
         <favorite v-if="name === 'question'" :question="model"></favorite>
-        <accept :answer="model"></accept>
+        <accept v-if="name === 'answer'" :answer="model"></accept>
     </div>
 </template>
 

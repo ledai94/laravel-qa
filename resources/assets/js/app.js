@@ -10,8 +10,10 @@ window.Vue = require("vue");
 import VueIziToast from "vue-izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 import Authorization from "./authorization/authorize";
+import Fragment from "vue-fragment";
 import Vue from "vue";
 
+Vue.use(Fragment.Plugin);
 Vue.use(VueIziToast);
 Vue.use(Authorization);
 /**
