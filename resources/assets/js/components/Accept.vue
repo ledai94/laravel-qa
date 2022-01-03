@@ -40,14 +40,14 @@ export default {
 
     methods: {
         create() {
+            console.log(123);
             axios.post(`/answers/${this.id}/accept`).then(res => {
                 this.$toast.success(res.data.message, "Success", {
                     timeout: 3000,
                     position: "bottomLeft"
                 });
-
                 this.isBest = true;
-
+                // console.log(this.isBest);
                 EventBus.$emit("accepted", this.id);
             });
         }
@@ -55,10 +55,12 @@ export default {
 
     computed: {
         canAccept() {
+            // console.log(this.authorize("accept", this.answer));
             return this.authorize("accept", this.answer);
         },
 
         accepted() {
+            // console.log(!this.canAccept, this.isBest);
             return !this.canAccept && this.isBest;
         },
 
